@@ -9,6 +9,7 @@ x-service-backend-common: &service-backend-common
     - ./backend:/app
   command:
     sh -c "
+    alembic upgrade head && \
     python -m uvicorn app.main:app --port=12321 --host=0.0.0.0 --reload
     "
   networks:
