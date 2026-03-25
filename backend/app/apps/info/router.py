@@ -18,3 +18,4 @@ async def get_database_info() -> BaseDatabaseInfoSchema:
     """Get current database info"""
     return BaseDatabaseInfoSchema(database_url=settings.DATABASE_ASYNC_URL)
 
+
